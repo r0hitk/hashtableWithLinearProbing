@@ -1,7 +1,5 @@
 package linearProbingHT;
 
-import simpleHashtable.SimpleHashtable;
-
 public class MainClass {
 
 	public static void main(String[] args) {
