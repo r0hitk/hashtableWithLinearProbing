@@ -84,6 +84,16 @@ public class Hashtable {
 		hashtable[hashedKey] = null;
 
 		
+		//Rehashing since marking the deleted items will increase load factor and 
+		//we'll need to change the put and get method as well.
+		HashedObject[] oldTable = hashtable;
+		hashtable = new HashedObject[oldTable.length];
+
+		for (int i = 0; i < oldTable.length; i++) {
+			if(oldTable[i] != null) {
+				put(oldTable[i].key, oldTable[i].person);
+			}
+		}
 		return temp;
 	}
 
