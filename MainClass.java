@@ -22,6 +22,12 @@ public class MainClass {
 		System.out.println();
 		System.out.println(ht.get("Richa").getName());
 		System.out.println(ht.get("Ankita").getName());
+		
+		System.out.println("Removed : " + ht.remove("Richa").getName());
+		System.out.println();
+		ht.printHashTable();
+		
+		
 	}
 
 }

@@ -73,6 +73,20 @@ public class Hashtable {
 
 	}
 
+	public Person remove(String key) {
+
+		int hashedKey = findKey(key);
+
+		if (hashedKey == -1)
+			return null;
+
+		Person temp = hashtable[hashedKey].person;
+		hashtable[hashedKey] = null;
+
+		
+		return temp;
+	}
+
 	private int hashKey(String key) {
 		return key.length() % 7;
 	}
